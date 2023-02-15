@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model dynamic
+
+
+<div style = "width:100%; height:6%; background-color:#2FA5EB;">
+</div>	
+			
+<div align = "center" width="600px" style="font-size:50px;font-family:forte;">
+				<font color="#428bca"> IVOR  </font><font c	olor="#000"> Hospital Patient Record</font><br><br>
+</div>
+
+<table align = "center" width = "100%">
+
+	@foreach(Wardcs item1 in Model.Ward)
+	{
+	
+		<tr align="center">
+			<td style="font-size:20px;">
+				<label> <strong>Ward ID :</strong> </label>@item1.wardID
+			</td>
+			<td style="font-size:20px;">
+				<label><strong>Speciality :</strong> </label>@item1.speciality
+			</td>
+		</tr>
+
+		<tr align="center">
+			<td style="font-size:20px;">
+				<label> <strong>Ward Name :</strong> </label>@item1.wardName
+			</td>
+			<td style="font-size:20px;">
+				<label><strong>Nurse ID :</strong> </label>@item1.nurseID
+			</td>
+		</tr>
+
+		<tr align="center">
+			<td style="font-size:20px;">
+				<label> <strong>Shift :</strong> </label>@item1.shift
+			</td>
+			<td style="font-size:20px;">
+				<label><strong>Non Registered Nurses :</strong> </label>@item1.nonRegNurses
+			</td>
+		</tr>
+
+		<br>
+		<br>
+
+	}
+
+</table>
+
+
+<div align="center" width="600px" style="font-size:50px;font-family:forte;">
+	<font color="#000"> Patient Information </font><br><br>
+</div>
+
+
+@foreach (Patient_History item in Model.patientHistory)
+{
+	<table align="center" width="100%">
+
+		<tr align="center">
+			<th style="font-size: 25px;">Patient ID</th>
+			<th style="font-size: 25px;">Patient Name</th>
+			<th style="font-size: 25px;">Care Unit</th>
+			<th style="font-size: 25px;">Bed No</th>
+			<th style="font-size: 25px;">Consultant</th>
+			<th style="font-size: 25px;">Date Admitted</th>
+
+		</tr>
+
+		<tr>
+
+			<td style="font-size:20px;" align="center">
+				@item.patientID
+			</td>
+
+			<td style="font-size:20px;" align="center">
+				@item.patientName
+			</td>
+			<td style="font-size:20px;" align="center">
+				@item.careunit
+			</td>
+
+			<td style="font-size:20px;" align="center">
+				@item.bedNo
+			</td>
+
+
+		<td style="font-size:20px;" align="center">
+			@item.consultant
+		</td>
+
+			<td style="font-size:20px;" align="center">
+				@item.admitDate
+			</td>
+		</tr>
+
+		<br>
+		<br>
+	</table>
+}

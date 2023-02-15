@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model dynamic
+
+
+<html>
+<head>
+<style>
+
+	 @@media (min-width: 1400px){
+
+  
+        .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 13520px;
+    padding: 0px; }}
+
+	*{
+			margin: 0px;
+			padding: 0px;
+			background-color: #befffe;
+	}
+
+	table, td, th{
+		border: 1px solid black;
+	}
+
+	table{
+		border-collapse: collapse;
+	}
+
+	.back {
+			padding: 43px 293px;
+		}
+
+		.back a {
+				text-decoration: none;
+				color: black
+			}
+
+		.back a:hover {
+				color: #428bca;
+				border-bottom: 2px solid gray;
+		}
+</style>
+
+</head>
+<body>
+
+    <div style = "width:100%; height:6%; background-color:#2FA5EB;">
+			</div>	
+			
+			<div align = "center" width="600px" style="font-size:50px;font-family:forte;">
+				<font color="#428bca"> IVOR  </font><font color="#000"> Non Register Nurses Record</font><br>
+			</div>
+
+	<table align="center" width="100%">
+			
+		<thead>
+
+		<tr align="center">
+				<th style="font-size:25px;">ID</th>
+				<th style="font-size:25px;">Name</th>
+				<th style="font-size:25px;">Address</th>
+				<th style="font-size:25px;">Telephone</th>
+				<th style="font-size:25px;">DOB</th>
+				<th style="font-size:25px;">HireDate</th>
+				<th style="font-size:25px;">Position</th>
+				<th style="font-size:25px;">Rate</th>
+				<th style="font-size:25px;">Working Hour</th>
+		</tr>
+		</thead>
+
+		<tbody>
+
+	@foreach(NonRegisterNurse item in Model.NonReg)
+	{
+
+
+			<tr align="center">
+				<td style="font-size:20px;">
+					@item.nurseID
+				</td>
+				<td style="font-size:20px;">
+					@item.nurseName
+				</td>
+				<td style="font-size:20px;">
+					@item.address
+				</td>
+				<td style="font-size:20px;">
+					@item.phone
+				</td>
+				<td style="font-size:20px;">
+					@item.dob
+				</td>
+			
+				<td style="font-size:20px;">
+					@item.hiredate
+				</td>
+				<td style="font-size:20px;">
+					@item.position
+				</td>
+				<td style="font-size:20px;">
+					@item.rate
+				</td>
+
+				<td style="font-size:20px;">
+					@item.workingHours
+				</td>
+
+			</tr>
+		}
+
+
+		</tbody>
+
+				<br>
+				<br>
+
+				<br>
+				<br>
+
+	
+		</table>
+
+
+	<div align="center" style="color:#428bca;">
+
+		<div class="back">
+
+		<td><br><br><a asp-area="" asp-controller="Nurse" asp-action="Index">Back</a></td>
+		</div>
+	</div>
+
+
+</body>

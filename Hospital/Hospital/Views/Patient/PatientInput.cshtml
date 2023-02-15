@@ -1,0 +1,197 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        @@media (min-width: 1400px){
+
+  
+        .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 13520px;
+    padding: 0px; }}
+}
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            height: 757px;
+            width: 1583px;
+            align-items: center;
+            justify-content: space-around;
+            background-image: linear-gradient(to right, #3434d3, #9d9ddb);
+        }
+
+        .box1 {
+            width: 345px;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: space-between; */
+        }
+
+        .box2 {
+            width: 923px;
+            height: 650px;
+            border-radius: 11% 0% 0% 9% / 35% 10% 10% 26%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #d3d7d9;
+
+        }
+
+        .box1 img {
+            width: 251px;
+            height: 119px;
+            margin-top: 35px;
+        }
+
+        .box1 h1 {
+            color: white;
+            font-size: 47px;
+            margin-top: 59px;
+        }
+
+        .box1 p {
+            margin-top: 34px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            line-height: 29px;
+        }
+
+        .back {
+            width: 132px;
+            height: 44px;
+            background-color: #f7f7f7;
+            text-align: center;
+            margin-top: 67px;
+            border-radius: 33px;
+
+        }
+
+        .back a {
+            text-decoration: none;
+        }
+
+        .patient-h {
+            font-family: forte;
+            color: #428bca;
+
+        }
+
+        .inputbars {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .rowinput {
+            display: flex;
+            flex-direction: row;
+            margin: 12px 23px;
+
+        }
+
+        .rowinput input {
+            width: 336px;
+            padding: 10px 11px;
+            margin: 10px 16px;
+        }
+
+        #rowone {
+            margin-top: 43px;
+        }
+
+        .btn {
+            padding: 15px 36px;
+            width: 145px;
+            background-color: #3131e1;
+            color: white;
+            border-radius: 23px;
+            border-color: transparent;
+            margin-left: 566px;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background-color: #6f6fd6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box1">
+            <img src="@Url.Content("~/images/logo.png")" alt="">
+            <h1>Welcome</h1>
+            <p>Adding Patients in Hospital Record <br> We value our Patients. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Corporis ea fuga, deserunt quasi provident reprehenderit ex sit. Debitis saepe enim
+                qui.</p>
+            <div class="back">
+                <a asp-area="" asp-controller="User" asp-action="Index">Go Back</a>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div align="center" width="600px" style="font-size:35px;font-family:forte; margin-top: 20px;">
+                <font color="#428bca"> THE IVOR PAINE </font>
+                <font color="#000"> MEMORIAL HOSPITAL </font><br><br>
+            </div>
+
+            <div style="width:50%; height:0%; background-color:#2FA5EB;">
+            </div>
+
+            <div class="patient-h">
+                <h1>ADDING PATIENT</h1>
+            </div>
+
+            <form action="@Url.Action("AddPatient")" method="post">
+
+            <div class="inputbars">
+
+                <div class="rowinput" id="rowone">
+
+                    <input type="text" name="patientID" placeholder="Enter Patient ID..">
+                    <input type="text" name="patientName" placeholder="Enter Patient Name..">
+                </div>
+
+                <div class="rowinput">
+
+                    <input type="text" name="address" placeholder="Enter Patient Address...">
+                    <input type="text" name="city" placeholder="Enter Patient City...">
+                </div>
+
+                <div class="rowinput">
+
+                    <input type="text" name="phone" placeholder="Enter Phone Number...">
+                    <input type="text" name="dob" placeholder="Enter Patient DOB...">
+                </div>
+
+                <div class="rowinput">
+                    <button class="btn">Register</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

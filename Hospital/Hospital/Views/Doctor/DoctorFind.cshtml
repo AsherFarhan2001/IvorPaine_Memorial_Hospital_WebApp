@@ -1,0 +1,132 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        @@media (min-width: 1400px) {
+
+
+            .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+                max-width: 1585px;
+                padding: 0px;
+            }
+        }
+
+        .container {
+            height: 157px;
+            width: 1583px;
+        }
+
+        .container1 {
+            width: 791px;
+            height: 472px;
+            display: block;
+            margin: auto;
+            background-color: #2FA5EB;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            padding: 80px 12px;
+        }
+
+        .inner .in {
+            width: 336px;
+            padding: 10px 11px;
+            margin: 10px 16px;
+        }
+
+
+        .search {
+            width: 132px;
+            padding: 11px 12px;
+            background-color: crimson;
+            border-color: transparent;
+        }
+
+        p {
+            /* width: 600px; */
+            font-size: 50px;
+            text-align: center;
+            font-family: forte;
+            color: #000;
+        }
+
+        .back {
+            padding: 43px 293px;
+        }
+
+            .back a {
+                text-decoration: none;
+                color: white
+            }
+
+                .back a:hover {
+                    color: #428bca;
+                    border-bottom: 2px solid gray;
+                }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div align="center" width="600px" style="font-size:50px;font-family:forte;">
+            <font color="#428bca"> THE IVOR PAINE </font>
+            <font color="#000"> MEMORIAL HOSPITAL </font><br><br>
+        </div>
+
+        <div style="width:50%; height:0%; background-color:#2FA5EB;">
+        </div>
+    </div>
+
+    <div class="container1">
+
+        <form action="@Url.Action("DoctorInfo")" method="post">
+
+            <div class="content">
+
+                <div class="inner">
+
+                    <input class="in" type="text" name="staffID" placeholder="Enter Staff ID..">
+                    <input class="search" type="submit" value="Search">
+                </div>
+
+
+                <p>OR</p>
+
+
+
+                <div class="inner">
+                    <input class="in" type="text" name="staffName" placeholder="Enter Staff Name..">
+                    <input class="search" type="submit" value="Search">
+                </div>
+
+                <div class="back">
+                    <a asp-area="" asp-controller="User" asp-action="Index">RETURN TO MAIN PAGE</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<head>
+	<title> IVOR Hospital </title>
+	
+	<style type = "text/css">
+
+		@@media (min-width: 1400px) {
+
+
+			.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+				max-width: 13520px;
+				padding: 0px;
+			}
+		}
+
+	*{
+		margin:auto;
+		padding:auto;
+	}
+	.logo{
+		width:100%;
+		border-bottom:2px solid #f0f0f0;
+	}
+	.logo{
+		width:1200px;
+		background-color:;
+		font-family:calibri;
+		padding:10px;
+		text-align:left;
+	}
+	.query{
+		font-family:calibri;
+		padding:80px;
+		font-size:17px;
+	}
+	
+	a{
+		padding:10px;
+		text-decoration:none;
+		color:gray;
+	}
+	a:hover{
+		color:#428bca;
+		border-bottom:2px solid gray;
+	}
+	
+	td{
+		<font size = "4px">
+		</font>
+	}
+
+	.pic img{
+		margin-top: 13px;
+		width: 100%;
+		height: 600px
+	}
+	
+	</style>
+	
+</head>
+<body>
+	
+	<div style = "width:100%; height:6%; background-color:#2FA5EB;">
+	</div>
+	
+	<div class="logo">
+		<table>
+			<tr>
+				<td width="350px" style="font-size:50px;font-family:forte;"> <font color="#428bca"> IVOR  </font><font color="#000"> Hospital</font> </td>
+				<td> <br> <br>
+					<font size = "4px"> 
+						<a asp-area="" asp-controller="Patient" asp-action="Index">PATIENT INFO</a> 
+						<a asp-area="" asp-controller="Ward" asp-action="Index">WARD INFO</a>  
+						<a asp-area="" asp-controller="Doctor" asp-action="Index">DOCTOR INFO</a>
+						<a asp-area="" asp-controller="Nurse" asp-action="Index">NURSE INFO</a>
+						<a asp-area="" asp-controller="User" asp-action="Input">FORMS</a>
+						<a href = "query.html">MORE INFO</a>
+						
+						
+					</font>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class = "pic">
+		<img src = @Url.Content("~/images/a.jpg")> 
+	</div>
+
+</body>

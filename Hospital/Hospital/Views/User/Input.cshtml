@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+	<head>
+		<title> IVOR Hospital </title>
+		
+		<style type = "text/css">
+		*{
+			margin:auto;
+			padding:auto;
+		}
+		.logo{
+			width:100%;
+			border-bottom:2px solid #f0f0f0;
+		}
+		.logo{
+			width:1200px;
+			background-color:;
+			font-family:calibri;
+			padding:10px;
+			text-align:left;
+		}
+		.query{
+			font-family:calibri;
+			padding:80px;
+			font-size:17px;
+		}
+		
+		a{
+			padding:10px;
+			text-decoration:none;
+			color:gray;
+		}
+		a:hover{
+			color:#428bca;
+			border-bottom:2px solid gray;
+		}
+		
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div style = "width:100%; height:6%; background-color:#2FA5EB;">
+	</div>
+	
+	<div class="logo">
+		<table>
+			<tr align = "center">
+				<td width="600px" style="font-size:50px;font-family:forte;"> <font color="#428bca"> IVOR  </font><font color="#000"> Hospital</font> </td>
+			</tr>
+		</table>
+	</div>
+	
+		<table>
+			<tr>
+				<td align = "left">
+					<font size = "4px"> 
+						<br><br><a asp-area="" asp-controller="Patient" asp-action="PatientInput">1. Patient</a><br><br>
+					<a asp-area="" asp-controller="Doctor" asp-action="DoctorInput">2. Doctor.</a><br><br>
+					<a asp-area="" asp-controller="Consultant" asp-action="ConsultantInput">3. Consultant. </a><br><br>
+					</font>
+				</td>
+			</tr>
+			<tr align = "center">
+				<td><br><br><a asp-area="" asp-controller="User" asp-action="Index">RETURN TO MAIN PAGE</a></td>
+			</tr>
+		</table>
+	</body>
+</html>

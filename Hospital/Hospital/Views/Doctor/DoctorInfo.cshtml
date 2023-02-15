@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model dynamic
+
+
+<div style = "width:100%; height:6%; background-color:#2FA5EB;">
+</div>	
+			
+<div align = "center" width="600px" style="font-size:50px;font-family:forte;">
+				<font color="#428bca"> IVOR  </font><font c	olor="#000"> Consultant Team Record</font><br><br>
+</div>
+
+<table align = "center" width = "100%">
+
+	@foreach(Doctor item1 in Model.Doctor)
+	{
+		<tr align="center">
+				<td style="font-size:20px;">
+				<label><strong>Staff NO : </strong> </label>@item1.DoctorID
+				</td>
+				<td style="font-size:20px;">
+				<label><strong>Staff Name : </strong> </label>@item1.DoctorName
+	 			</td>
+		</tr>
+
+		<tr align="center">
+			<td style="font-size:20px;">
+				<label><strong>Position :</strong> </label>@item1.DoctorPosition
+			</td>
+			<td style="font-size:20px;">
+				<label><strong>Date Joined Team :</strong> </label>@item1.DateJoin
+			</td>
+		</tr>
+	}
+
+</table>
+
+<div align="center" width="600px" style="font-size:50px;font-family:forte;">
+	<font color="#000"> Previous Experience </font><br><br>
+</div>
+
+@foreach(Experience item in Model.Experience)
+{
+
+<table align = "center" width = "100%">
+
+		<tr align="center">
+			<th style="font-size: 25px;">From Date</th>
+			<th style="font-size: 25px;">To Date</th>
+			<th style="font-size: 25px;">Position</th>
+			<th style="font-size: 25px;">Establishment</th>
+			<th style="font-size: 25px;">Date Grade</th>
+			<th style="font-size: 25px;">Perfomance</th>
+
+
+
+		</tr>
+
+				<tr>
+					<td style="font-size:20px;" align = "center">
+						@item.fromDate
+					</td>
+					<td style="font-size:20px;" align = "center">
+						@item.toDate
+					</td>
+					<td style="font-size:20px;" align = "center">
+						@item.position
+					</td>
+					<td style="font-size:20px;" align = "center">
+						@item.establishment
+					</td>
+					<td style="font-size:20px;" align = "center">
+						@item.dateGrade
+					</td>
+					<td style="font-size:20px;" align = "center">
+						@item.perfomance
+					</td>
+					
+				</tr>
+
+				<br><br>
+			</table>
+}

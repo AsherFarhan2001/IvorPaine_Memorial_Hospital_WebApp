@@ -1,0 +1,175 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+
+        @@media (min-width: 1400px){
+
+  
+        .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 13520px;
+    padding: 0px; }}
+}
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            max-width: 1600px;
+        }
+
+        .container {
+            display: flex;
+            height: 99.5vh;
+        }
+
+        .inner-container {
+            width: 50%;
+        }
+
+            .inner-container img {
+                width: 790px;
+                height: 753px;
+            }
+
+        .content {
+            padding-top: 23px;
+        }
+
+        .box {
+            height: 480px;
+            width: 566px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+
+            .box .inside-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        .inside-box img {
+            width: 161px;
+            height: 130px;
+        }
+
+        .icons i {
+            position: absolute;
+            padding: 31px 47px;
+            color: #14010b;
+            font-size: 16px;
+        }
+
+        .icons input {
+            padding: 14px 41px;
+            font-size: 14px;
+            border-radius: 25px;
+            margin: 14px 26px;
+            background-color: #e9e1e1;
+            width: 351px;
+            border-color: transparent;
+        }
+
+        h2 {
+            font-family: forte;
+            font-size: 40px;
+            color: #428bca;
+        }
+
+        .remember {
+            margin: 0px 10px;
+        }
+
+            .remember input {
+                margin-left: 26px;
+                margin-right: 7px
+            }
+
+        .btn {
+            font-size: 16px;
+            border-radius: 26px;
+            padding: 12px 12px;
+            margin: 35px 134px;
+            width: 125px;
+            background-color: #2f7dff;
+            border-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background-color: #4e8cf8;
+            }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="inner-container">
+            <img src="@Url.Content("~/images/4.jpg")" alt="Error Loading Image">
+        </div>
+
+        <div class="inner-container">
+            <div class="content">
+
+                <div align="center" width="600px" style="font-size:50px;font-family:forte;">
+                    <font color="#428bca"> THE IVOR PAINE </font>
+                    <font color="#000"> MEMORIAL HOSPITAL </font><br><br>
+                </div>
+
+                <div style="width:50%; height:0%; background-color:#2FA5EB;">
+                </div>
+
+                <div class="box">
+                    <div class="inside-box">
+                        <img src="@Url.Content("~/images/1.jpg")" alt="">
+                        <h2>Welcome</h2>
+
+                        <form action="@Url.Action("Login")" method="post">
+
+
+                            <div class="icons">
+                                <i class="fa fa-user icon"></i>
+
+                                <input class="input-icon" type="text" placeholder="Enter UserName" name="username">
+                            </div>
+
+
+                            <div class="icons">
+                                <i class="fa fa-lock icon"></i>
+
+                                <input class="input-icon" type="text" placeholder="Enter Password" name="password">
+                            </div>
+
+                            <div class="remember">
+
+                                <input type="checkbox" name="remember" id="" value="Remember">Remember Me &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                <a href="#">Forgot Password</a>
+                            </div>
+
+
+                            <input class="btn" type="submit" value="Login">
+
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

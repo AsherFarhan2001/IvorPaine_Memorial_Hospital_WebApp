@@ -1,0 +1,112 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model dynamic
+
+
+<div style = "width:100%; height:6%; background-color:#2FA5EB;">
+</div>	
+			
+<div align = "center" width="600px" style="font-size:50px;font-family:forte;">
+				<font color="#428bca"> IVOR  </font><font c	olor="#000"> Hospital Patient Record</font><br><br>
+</div>
+
+<table align = "center" width = "100%">
+
+	@foreach(Patient item1 in Model.Patient)
+	{
+		@foreach (Doctor item2 in Model.Doctor)
+		{
+			foreach (Consultant item3 in Model.Consultant)
+			{
+				<tr align="center">
+					<td style="font-size:20px;">
+						<label><strong>Patient ID :</strong> </label>@item1.patientID
+					</td>
+					<td style="font-size:20px;">
+						<label><strong>Doctor ID :</strong> </label>@item2.DoctorID
+					</td>
+				</tr>
+
+				<tr align="center">
+					<td style="font-size:20px;">
+						<label><strong>Patient Name :</strong> </label>@item1.PatientName
+					</td>
+					<td style="font-size:20px;">
+						<label><strong>Doctor Name :</strong> </label>@item2.DoctorName
+					</td>
+				</tr>
+				<tr align="center">
+					<td style="font-size:20px;">
+						<label><strong>Patient DOB :</strong>: </label>@item1.PatientDOB
+					</td>
+					<td style="font-size:20px;">
+					</td>
+				</tr>
+				<tr align="center">
+					<td style="font-size:20px;">
+					</td>
+					<td style="font-size:20px;">
+						<label><strong>Consultant ID :</strong> </label>@item3.consultantID
+					</td>
+				</tr>
+				<tr align="center">
+					<td style="font-size:20px;">
+					</td>
+					<td style="font-size:20px;">
+						<label><strong>Consultant Name :</strong> </label>@item3.consultantName
+					</td>
+				</tr>
+				<br>
+				<br>
+			}
+		}
+
+
+	}
+
+</table>
+
+<div align = "center" width="600px" style="font-size:50px;font-family:forte;">
+				<font color="#000"> Medical History </font><br><br>
+			</div>
+
+
+@foreach(MedicalHistory item in Model.Medical)
+{
+	<table align="center" width="100%">
+
+		<tr align="center">
+			<th style="font-size: 25px;">Complaint Code</th>
+			<th style="font-size: 25px;">Treatment Code</th>
+			<th style="font-size: 25px;">Date Treatment Started</th>
+			<th style="font-size: 25px;">Date Treatment Ended</th>
+		
+
+		</tr>
+
+		<tr>
+			
+			<td style="font-size:20px;" align="center">
+				@item.complaintCode
+			</td>
+			
+			<td style="font-size:20px;" align="center">
+				@item.treatmentCode
+			</td>
+			<td style="font-size:20px;" align="center">
+				@item.startDate
+			</td>
+
+			<td style="font-size:20px;" align="center">
+				@item.endDate
+			</td>
+		</tr>
+
+		<br>
+		<br>
+	</table>
+}
